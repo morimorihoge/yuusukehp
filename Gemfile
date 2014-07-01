@@ -6,8 +6,8 @@ gem 'rails', '4.1.2'
 # Use sqlite3 as the database for Active Record
 
 # SQLite3のバージョンを1.3.9にするのはWindows対策
-gem 'sqlite3', '1.3.9
-'
+gem 'sqlite3', '1.3.9'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -43,3 +43,6 @@ gem 'spring', group: :development
 
 # for bootstrap3
 gem 'bootstrap-sass', '~> 3.2.0'
+
+# for windows timezone error
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
