@@ -1,0 +1,31 @@
+.article {
+  .title {
+    border-left: 5px solid #3275c1;
+    border-bottom: 1px solid #3275c1;
+    padding-left: 10px;
+    padding-bottom: 1px;
+    h2 {
+      margin-top: 5px;
+      margin-bottom: 0px;
+    }
+    margin-bottom: 10px;
+  }
+  border-bottom: 1px dotted #ddd;
+  margin-bottom: 20px;
+  .control {
+    ul {
+      margin-bottom: 5px;
+      list-style-type: none;
+      li {
+        display: block;
+        float: right;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+footer {
+  text-align: center;
+}
+

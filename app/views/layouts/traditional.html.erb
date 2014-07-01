@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ゆうすけのブログ</title>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<h1>ゆうすけのブログ</h1>
+<hr/>
+メニュー：
+<a href="#">About</a>｜
+<a href="#">最新の日記</a>｜
+<a href="#">過去の日記</a>
+<br/>
+※ダミーリンクなのでクリックしても遷移しません
+<hr/>
+<%= yield %>
+
+<hr/>
+&copy; ゆうすけ, 2014
+
+</body>
+</html>

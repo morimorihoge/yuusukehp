@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>いまどきのゆうすけブログ！</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'modern', media: 'all' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'modern.js' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<h1>ゆうすけのブログ</h1>
+<hr/>
+メニュー：
+<a href="#">About</a>｜
+<a href="#">最新の日記</a>｜
+<a href="#">過去の日記</a>
+<br/>
+※ダミーリンクなのでクリックしても遷移しません
+<hr/>
+
+<%= yield %>
+
+&copy; ゆうすけ, 2014
+
+</body>
+</html>
