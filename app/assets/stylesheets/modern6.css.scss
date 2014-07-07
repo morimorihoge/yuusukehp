@@ -1,0 +1,75 @@
+@import "compass";
+@import "compass/utilities";
+@import "compass/css3";
+
+body {
+  background-image: url(asset-path('zurui/retina_wood.png', image));
+}
+
+#nav-header {
+  background-image: url(asset-path('zurui/purty_wood.png', image));
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  @include box-shadow(rgba(255, 255, 255, .3) 0 1px 0);
+  //  border-bottom: 1px solid #999;
+  margin-bottom: 0;
+}
+
+.navbar-default .navbar-brand {
+  color: #111;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #111;
+}
+
+#main-content {
+  padding-top: 10px;
+  margin-bottom: 0;
+  border-bottom: 0;
+  border-style: none;
+
+  .article {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+  }
+}
+
+.article {
+  .title {
+    border-left: 5px solid #3275c1;
+    border-bottom: 1px solid #3275c1;
+    padding-left: 10px;
+    padding-bottom: 1px;
+    h2 {
+      margin-top: 5px;
+      margin-bottom: 0px;
+      text-shadow: -1px 1px 0 rgba(255, 255, 255, 1);
+      font-weight: bold;
+    }
+    margin-bottom: 10px;
+  }
+  border-bottom: 1px dotted #ddd;
+  margin-bottom: 20px;
+  .control {
+    ul {
+      margin-bottom: 5px;
+      list-style-type: none;
+      text-align: right;
+      li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+hr {
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  @include box-shadow(rgba(255, 255, 255, .3) 0 1px 0);
+}
+
+footer {
+  text-align: center;
+  border-style: none;
+}
+

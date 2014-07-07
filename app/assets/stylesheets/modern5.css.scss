@@ -16,9 +16,9 @@
     ul {
       margin-bottom: 5px;
       list-style-type: none;
+      text-align: right;
       li {
-        display: block;
-        float: right;
+        display: inline-block;
         margin-right: 20px;
       }
     }

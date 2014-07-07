@@ -46,3 +46,6 @@ gem 'bootstrap-sass', '~> 3.2.0'
 
 # for windows timezone error
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
+# for zurui-technique
+gem 'compass-rails'

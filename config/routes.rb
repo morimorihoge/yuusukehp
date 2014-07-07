@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'modern6/index'
+
   get 'modern5/index'
 
   get 'modern4/index'
