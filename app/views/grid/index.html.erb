@@ -1,0 +1,171 @@
+<div class="container">
+  <div class="row">
+    ※このページは以下のファイルから構成されています。ソースコードも参考にしつつ眺めてみて下さい。
+    <ul>
+      <li>コントローラ: app/controllers/grid_controller.rb</li>
+      <li>ビュー
+        <ul>
+          <li>app/views/layouts/grid.html.erb</li>
+          <li>app/views/grid/index.html.erb</li>
+        </ul>
+      </li>
+      <li>その他
+        <ul>
+          <li>ルーティング: config/routes.rbの「get 'grid/index'」</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="row">
+    <h1>段組レイアウト編</h1>
+  </div>
+
+  <div class="row" style="background-color: #ddd;">
+    <p>
+      Bootstrapのグリッドレイアウトは基本はCSSのrowクラス、col系クラスを使って配置を行う。
+      必ずrowの中にcolを作っていくこと。
+      また、<strong>rowを組むよりも外側をcontainerクラスを持つ要素で囲むこと</strong>
+    </p>
+
+    <p>
+      例として、このグレーのブロックはdiv.rowの中に直接書かれた要素である。
+    </p>
+
+    <p>
+      row（行）の中を分割したい場合に、div.row要素の中にdiv.col系クラスを使って記述していく。
+      col（列）の基本は <strong>1つのrowの中を12分割</strong> である。
+      以下の緑色ブロックはrowの中にcol-xs-1クラスの要素を12個並べたものである（ソースコードも見てみると分かりやすい）。ブロックの境目が分かりやすい様に便宜上borderを指定している。
+    </p>
+  </div>
+
+  <div class="row" style="height: 10px;"></div>
+
+  <div class="row" style="background-color: #00ff00;">
+    <div class="col-xs-1" style="border: solid 1px #00aa00;">1個目</div>
+    <div class="col-xs-1" style="border: solid 1px #00aa00;">2個目</div>
+    <div class="col-xs-1" style="border: solid 1px #00aa00;">3個目</div>
+    <div class="col-xs-1" style="border: solid 1px #00aa00;">4個目</div>
+    <div class="col-xs-1" style="border: solid 1px #00aa00;">5個目</div>
+    <div class="col-xs-1" style="border: solid 1px #00aa00;">6個目</div>
+    <div class="col-xs-1" style="border: solid 1px #00aa00;">7個目</div>
+    <div class="col-xs-1" style="border: solid 1px #00aa00;">8個目</div>
+    <div class="col-xs-1" style="border: solid 1px #00aa00;">9個目</div>
+    <div class="col-xs-1" style="border: solid 1px #00aa00;">10個目</div>
+    <div class="col-xs-1" style="border: solid 1px #00aa00;">11個目</div>
+    <div class="col-xs-1" style="border: solid 1px #00aa00;">12個目</div>
+  </div>
+
+  <div class="row" style="height: 10px;"></div>
+
+  <div class="row" style="background-color: #ddd;">
+    これを利用して、例えば3/12サイズの左サイドメニューと9/12サイズのコンテンツエリアがある様なページを作りたい場合、rowの中にcol-xs-3、col-xs-9を使い、以下の様な配置になる。
+  </div>
+
+  <div class="row" style="height: 10px;"></div>
+
+  <div class="row" style="background-color: #aaaaff;">
+    <div class="col-xs-3" style="border: solid 1px #0000aa;">サイドメニュー</div>
+    <div class="col-xs-9" style="border: solid 1px #0000aa;">（コンテンツエリア）
+      <h1>タイトル</h1>
+      <p>文章やコンテンツを書いていく</p>
+    </div>
+  </div>
+
+  <div class="row" style="height: 10px;"></div>
+
+  <div class="row" style="background-color: #ddd;">
+    右側にサイドメニューを置きたければ、先にコンテンツエリアを書けば良い
+  </div>
+
+  <div class="row" style="height: 10px;"></div>
+
+  <div class="row" style="background-color: #aaaaff;">
+    <div class="col-xs-9" style="border: solid 1px #0000aa;">（コンテンツエリア）
+      <h1>タイトル</h1>
+      <p>文章やコンテンツを書いていく</p>
+    </div>
+    <div class="col-xs-3" style="border: solid 1px #0000aa;">サイドメニュー</div>
+  </div>
+
+  <div class="row">
+    <h1>タイル状配置編</h1>
+  </div>
+
+  <div class="row" style="background-color: #ddd;">
+    row内でcol要素を配置していくとき、12を超えた要素は次の行に回り込んでいく。これを利用するとタイル状に要素を配置することが簡単にできる（画像や動画のサムネイル一覧のイメージ）
+  </div>
+
+  <div class="row" style="height: 10px;"></div>
+
+  <div class="row" style="background-color: #ffaaaa;">
+    <div class="col-xs-3" style="border: solid 1px #0000aa;">col-xs-3の要素1</div>
+    <div class="col-xs-3" style="border: solid 1px #0000aa;">col-xs-3の要素2</div>
+    <div class="col-xs-3" style="border: solid 1px #0000aa;">col-xs-3の要素3</div>
+    <div class="col-xs-3" style="border: solid 1px #0000aa;">col-xs-3の要素4</div>
+    <div class="col-xs-3" style="border: solid 1px #0000aa;">col-xs-3の要素5</div>
+    <div class="col-xs-3" style="border: solid 1px #0000aa;">col-xs-3の要素6</div>
+    <div class="col-xs-3" style="border: solid 1px #0000aa;">col-xs-3の要素7</div>
+    <div class="col-xs-3" style="border: solid 1px #0000aa;">col-xs-3の要素8</div>
+    <div class="col-xs-3" style="border: solid 1px #0000aa;">col-xs-3の要素9</div>
+    <div class="col-xs-3" style="border: solid 1px #0000aa;">col-xs-3の要素10</div>
+  </div>
+
+  <div class="row">
+    <h1>タイル状配置編</h1>
+  </div>
+
+  <div class="row" style="background-color: #ddd;">
+    row内でcol要素を配置していくとき、12を超えた要素は次の行に回り込んでいく。これを利用するとタイル状に要素を配置することが簡単にできる（画像や動画のサムネイル一覧のイメージ）
+  </div>
+
+  <div class="row" style="height: 10px;"></div>
+
+  <div class="row">
+    <h1>まとめ</h1>
+  </div>
+
+  <div class="row" style="background-color: #ddd;">
+    colの中にrowを書くこともできるので、Youtubeの様に「サイドメニュー＋コンテンツエリアにタイル状に要素を配置」と言ったことは以下の様なコードで実現できる（具体的なソースはファイルを見ること）
+  </div>
+
+  <div class="row" style="height: 10px;"></div>
+
+  <div class="row" style="background-color: #ff88ff;">
+    ヘッダ
+  </div>
+  <div class="row" style="background-color: #ffaaaa;">
+    <div class="col-xs-3" style="background-color: #88ff88;">
+      サイドメニュー
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+    </div>
+    <div class="col-xs-9" style="background-color: #ffaaaa;">
+      <div class="row" style="border: solid 1px #aa0000;">
+        <h1>メインコンテンツエリア</h1>
+      </div>
+      <div class="row">
+        <div class="col-xs-3" style="border: solid 1px #0000aa;">col-xs-3の要素1</div>
+        <div class="col-xs-3" style="border: solid 1px #0000aa;">col-xs-3の要素2</div>
+        <div class="col-xs-3" style="border: solid 1px #0000aa;">col-xs-3の要素3</div>
+        <div class="col-xs-3" style="border: solid 1px #0000aa;">col-xs-3の要素4</div>
+        <div class="col-xs-3" style="border: solid 1px #0000aa;">col-xs-3の要素5</div>
+        <div class="col-xs-3" style="border: solid 1px #0000aa;">col-xs-3の要素6</div>
+        <div class="col-xs-3" style="border: solid 1px #0000aa;">col-xs-3の要素7</div>
+        <div class="col-xs-3" style="border: solid 1px #0000aa;">col-xs-3の要素8</div>
+        <div class="col-xs-3" style="border: solid 1px #0000aa;">col-xs-3の要素9</div>
+        <div class="col-xs-3" style="border: solid 1px #0000aa;">col-xs-3の要素10</div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="background-color: #8888ff;">
+    フッタ
+  </div>
+</div>
